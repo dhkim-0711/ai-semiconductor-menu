@@ -92,6 +92,21 @@ function is2026NoticeLink(link) {
   return /2026/.test(`${link.label} ${link.description}`);
 }
 
+function getTypeOrder(link) {
+  const match = `${link.label} ${link.description}`.match(/Type\s*([12])/i);
+  return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
+}
+
+function sortProjectLinks(projectId, links) {
+  if (projectId !== "ax-sprint") {
+    return links;
+  }
+
+  const introLinks = links.filter((link) => !isNoticeLikeLink(link)).sort((a, b) => getTypeOrder(a) - getTypeOrder(b));
+  const noticeLinks = links.filter(isNoticeLikeLink).sort((a, b) => getTypeOrder(a) - getTypeOrder(b));
+  return [...introLinks, ...noticeLinks];
+}
+
 function dedupeLinks(links) {
   const seen = new Set();
 
@@ -169,11 +184,10 @@ function buildData(rows, autoNoticeData) {
     const manualNoticeLinks = [...introLinks.filter(isNoticeLikeLink), ...splitLinks(row.noticeLinks)].filter(
       is2026NoticeLink
     );
-    announcementLinksByProjectId[row.projectId] = dedupeLinks([
-      ...introPages,
-      ...(autoNoticeLinksByProjectId[row.projectId] || []),
-      ...manualNoticeLinks
-    ]);
+    announcementLinksByProjectId[row.projectId] = sortProjectLinks(
+      row.projectId,
+      dedupeLinks([...introPages, ...(autoNoticeLinksByProjectId[row.projectId] || []), ...manualNoticeLinks])
+    );
   });
 
   return {

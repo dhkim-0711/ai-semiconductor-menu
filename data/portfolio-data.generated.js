@@ -1,5 +1,5 @@
 window.AI_MENU_DATA = {
-  "generatedAt": "2026-05-07T07:16:15.188Z",
+  "generatedAt": "2026-05-07T07:29:22.217Z",
   "noticeSyncGeneratedAt": "2026-05-07T07:16:05.732Z",
   "valueChains": [
     {
@@ -971,14 +971,14 @@ window.AI_MENU_DATA = {
         "description": "NIPA 공식 사업소개 화면에서 Type2의 사업 개요를 확인할 수 있습니다."
       },
       {
-        "label": "2026년 AI기반 엔드프로덕트 상용화 지원사업 Type2 신규과제 모집 공고",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=887&nttNo=16586",
-        "description": "AI기반 엔드프로덕트 상용화 지원 (Type2) 공고입니다."
-      },
-      {
         "label": "2026년 AI기반 엔드프로덕트 상용화 지원사업 Type1 신규과제 모집 공고",
         "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=886&nttNo=16585",
         "description": "AI기반 엔드프로덕트 상용화 지원 (Type1) 공고입니다."
+      },
+      {
+        "label": "2026년 AI기반 엔드프로덕트 상용화 지원사업 Type2 신규과제 모집 공고",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=887&nttNo=16586",
+        "description": "AI기반 엔드프로덕트 상용화 지원 (Type2) 공고입니다."
       }
     ],
     "ax-validation": [
