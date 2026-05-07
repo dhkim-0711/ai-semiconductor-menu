@@ -844,6 +844,13 @@ body {
   margin-top: 14px;
 }
 
+.notice-sync-status {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .announcement-link {
   display: grid;
   gap: 6px;

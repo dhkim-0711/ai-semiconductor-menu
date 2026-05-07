@@ -1,0 +1,42 @@
+name: Sync NIPA Notices
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17,47 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync-notices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Sync NIPA business notices
+        run: node tools/sync-nipa-notices.js
+
+      - name: Rebuild site data
+        run: node tools/build-web-data-from-csv.js
+
+      - name: Commit updated notice data
+        run: |
+          if git diff --quiet -- data/auto-notice-links.json data/projects-master.json data/portfolio-data.generated.js; then
+            echo "No notice updates detected."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/auto-notice-links.json data/projects-master.json data/portfolio-data.generated.js
+          git commit -m "Sync NIPA business notices"
+          git push
