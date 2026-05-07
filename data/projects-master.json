@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-07T06:49:33.644Z",
+  "generatedAt": "2026-05-07T07:01:29.933Z",
   "rows": [
     {
       "valueChainId": "strategy",
@@ -166,7 +166,7 @@
       "support": "정규트랙: 청소로봇, 양계관리로봇, 스마트헬멧, 스마트글라스 등 산업수요형 AX 디바이스 개발 지원 || 정규트랙: 제조·HW + NPU + AI서비스 기업 컨소시엄 기반 2년형 개발·실증 지원 || 미니트랙: 응용실증된 AI서비스의 검증 결과를 활용한 상품화 사례 확보 지원 || 기존 6개 과제 외 신규 컨소시엄 추가 지원으로 AX 디바이스 확산 규모 확대",
       "schedule": "2~3월 사업공고 || 4월 선정평가 및 협약 || 4~12월 과제수행 || 8월 중간점검 || 12월 결과평가",
       "effect": "산업 수요형 제품 사례 확대 || 국산 NPU 기반 디바이스 생태계 확장 || 실증 성과의 제품화·시장확산 가속",
-      "introLinks": "국산 AI반도체 기반 AX디바이스 개발실증 사업소개 >>> https://www.nipa.kr/home/bsnsAll/0/detail?bsnsDtlsIemNo=826 >>> NIPA 공식 사업소개 화면에서 사업 개요와 추진 구조를 확인할 수 있습니다.",
+      "introLinks": "AX디바이스 개발·실증(정규트랙) 사업소개 >>> https://www.nipa.kr/home/bsnsAll/1/detail?bsnsDtlsIemNo=869 >>> NIPA 공식 사업소개 화면에서 정규트랙 사업 개요와 추진 구조를 확인할 수 있습니다. || AX디바이스 개발·실증(미니트랙) 사업소개 >>> https://www.nipa.kr/home/bsnsAll/0/detail?bsnsDtlsIemNo=857 >>> NIPA 공식 사업소개 화면에서 미니트랙 사업 개요와 추진 구조를 확인할 수 있습니다.",
       "noticeLinks": "2026년 AX디바이스 개발·실증 정규트랙 공고 >>> https://www.nipa.kr/home/2-2/16539 >>> AX디바이스 개발·실증 정규트랙 신규과제 운영기관 모집 공고입니다. || 2026년 AX디바이스 개발·실증 미니트랙 공고 >>> https://www.nipa.kr/home/2-2/16491 >>> AX디바이스 개발·실증 미니트랙 사업 공고입니다."
     },
     {
@@ -208,8 +208,8 @@
       "support": "즉시전환 트랙: AI 바디캠, AI 글래스, 구급차 호출 등 기존 제품·서비스의 AX 전환 지원 || 신속개발 트랙: 제조, 금융 등 시장 확산 파급력이 높은 AI 제품·서비스 신규개발 지원 || AX 시제품 제작과 산업·시장 연계를 통해 개발, 상용화, 확산까지 이어지는 전주기 지원 || 국산 NPU 활용 확대와 국민생활 밀착형 AI 제품·서비스 확산 촉진",
       "schedule": "2~3월 사업공고 || 3월 협약체결 || 4~11월 과제수행 || 8월 중간점검 || 12월 결과평가",
       "effect": "국민 체감형 AX 확산 가속 || 국산 NPU 활용 수요 확대 || 제품·서비스 신규개발과 시장진입 확대",
-      "introLinks": "AI 엔드프로덕트 상용화 지원 Type 1 사업소개 >>> https://www.nipa.kr/home/bsnsAll/3/nttDetail?bbsNo=4&bsnsDtlsIemNo=&nttNo=16471&tab=2 >>> NIPA 공식 사업소개 화면에서 Type 1의 사업 개요를 확인할 수 있습니다. || AI 엔드프로덕트 상용화 지원 Type 2 사업소개 >>> https://www.nipa.kr/home/bsnsAll/6/nttDetail?bbsNo=4&bsnsDtlsIemNo=&nttNo=16475&tab=2 >>> NIPA 공식 사업소개 화면에서 Type 2의 사업 개요를 확인할 수 있습니다.",
-      "noticeLinks": "2026년 AI 엔드프로덕트 상용화 지원 Type 1 공고 >>> https://www.nipa.kr/home/2-2/16471 >>> 공공AX 프로젝트 신규과제 모집 공고입니다. || 2026년 AI 엔드프로덕트 상용화 지원 Type 2 공고 >>> https://www.nipa.kr/home/2-2/16475 >>> AI 민생 프로젝트 유형의 신규과제 모집 공고입니다."
+      "introLinks": "AI기반 엔드프로덕트 상용화 지원(Type1) 사업소개 >>> https://www.nipa.kr/home/bsnsAll/1/detail?bsnsDtlsIemNo=886 >>> NIPA 공식 사업소개 화면에서 Type1의 사업 개요를 확인할 수 있습니다. || AI기반 엔드프로덕트 상용화 지원(Type2) 사업소개 >>> https://www.nipa.kr/home/bsnsAll/1/detail?bsnsDtlsIemNo=887 >>> NIPA 공식 사업소개 화면에서 Type2의 사업 개요를 확인할 수 있습니다.",
+      "noticeLinks": "2026년 AI기반 엔드프로덕트 상용화 지원 Type1 공고 >>> https://www.nipa.kr/home/2-2/16585 >>> AI기반 엔드프로덕트 상용화 지원 Type1 신규과제 모집 공고입니다. || 2026년 AI기반 엔드프로덕트 상용화 지원 Type2 공고 >>> https://www.nipa.kr/home/2-2/16586 >>> AI기반 엔드프로덕트 상용화 지원 Type2 신규과제 모집 공고입니다."
     },
     {
       "valueChainId": "validation",

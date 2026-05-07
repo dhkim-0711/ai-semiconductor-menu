@@ -1,6 +1,6 @@
 window.AI_MENU_DATA = {
-  "generatedAt": "2026-05-07T06:49:33.644Z",
-  "noticeSyncGeneratedAt": "2026-05-07T06:43:54.304Z",
+  "generatedAt": "2026-05-07T07:01:29.933Z",
+  "noticeSyncGeneratedAt": "2026-05-07T07:01:21.061Z",
   "valueChains": [
     {
       "id": "strategy",
@@ -952,19 +952,29 @@ window.AI_MENU_DATA = {
     ],
     "ax-device": [
       {
-        "label": "국산 AI반도체 기반 AX디바이스 개발실증 사업소개",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/detail?bsnsDtlsIemNo=826",
-        "description": "NIPA 공식 사업소개 화면에서 사업 개요와 추진 구조를 확인할 수 있습니다."
+        "label": "AX디바이스 개발·실증(정규트랙) 사업소개",
+        "href": "https://www.nipa.kr/home/bsnsAll/1/detail?bsnsDtlsIemNo=869",
+        "description": "NIPA 공식 사업소개 화면에서 정규트랙 사업 개요와 추진 구조를 확인할 수 있습니다."
       },
       {
-        "label": "2026년 AX디바이스 개발·실증 정규트랙 공고",
-        "href": "https://www.nipa.kr/home/2-2/16539",
-        "description": "AX디바이스 개발·실증 정규트랙 신규과제 운영기관 모집 공고입니다."
+        "label": "AX디바이스 개발·실증(미니트랙) 사업소개",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/detail?bsnsDtlsIemNo=857",
+        "description": "NIPA 공식 사업소개 화면에서 미니트랙 사업 개요와 추진 구조를 확인할 수 있습니다."
       },
       {
-        "label": "2026년 AX디바이스 개발·실증 미니트랙 공고",
-        "href": "https://www.nipa.kr/home/2-2/16491",
-        "description": "AX디바이스 개발·실증 미니트랙 사업 공고입니다."
+        "label": "2026년 AX디바이스 개발·실증(정규트랙)사업 신규과제 운영기관 모집 공고",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=869&nttNo=16539",
+        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-03-09 15:00 ~ 2026-03-30 15:00 · AX디바이스 개발·실증(정규트랙)"
+      },
+      {
+        "label": "2026년 AX디바이스 개발 실증(미니트랙) 사업 공고",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=857&nttNo=16491",
+        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-02-24 09:00 ~ 2026-03-25 15:00 · AX디바이스 개발 실증(미니트랙)"
+      },
+      {
+        "label": "2026년 AX디바이스 개발·실증(정규트랙) 사업 수요기업 모집 공고",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=869&nttNo=16758",
+        "description": "NIPA 자동반영 · D-29 · 신청기간 : 2026-05-07 13:00 ~ 2026-06-05 15:00 · AX디바이스 개발·실증(정규트랙)"
       }
     ],
     "ondevice-expansion": [
@@ -986,14 +996,24 @@ window.AI_MENU_DATA = {
     ],
     "ax-sprint": [
       {
-        "label": "AI 엔드프로덕트 상용화 지원 Type 1 사업소개",
-        "href": "https://www.nipa.kr/home/bsnsAll/3/nttDetail?bbsNo=4&bsnsDtlsIemNo=&nttNo=16471&tab=2",
-        "description": "NIPA 공식 사업소개 화면에서 Type 1의 사업 개요를 확인할 수 있습니다."
+        "label": "AI기반 엔드프로덕트 상용화 지원(Type1) 사업소개",
+        "href": "https://www.nipa.kr/home/bsnsAll/1/detail?bsnsDtlsIemNo=886",
+        "description": "NIPA 공식 사업소개 화면에서 Type1의 사업 개요를 확인할 수 있습니다."
       },
       {
-        "label": "AI 엔드프로덕트 상용화 지원 Type 2 사업소개",
-        "href": "https://www.nipa.kr/home/bsnsAll/6/nttDetail?bbsNo=4&bsnsDtlsIemNo=&nttNo=16475&tab=2",
-        "description": "NIPA 공식 사업소개 화면에서 Type 2의 사업 개요를 확인할 수 있습니다."
+        "label": "AI기반 엔드프로덕트 상용화 지원(Type2) 사업소개",
+        "href": "https://www.nipa.kr/home/bsnsAll/1/detail?bsnsDtlsIemNo=887",
+        "description": "NIPA 공식 사업소개 화면에서 Type2의 사업 개요를 확인할 수 있습니다."
+      },
+      {
+        "label": "2026년 AI기반 엔드프로덕트 상용화 지원사업 Type2 신규과제 모집 공고",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=887&nttNo=16586",
+        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-04-05 00:00 ~ 2026-04-20 14:00 · AI기반 엔드프로덕트 상용화 지원 (Type2)"
+      },
+      {
+        "label": "2026년 AI기반 엔드프로덕트 상용화 지원사업 Type1 신규과제 모집 공고",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=886&nttNo=16585",
+        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-04-05 00:00 ~ 2026-04-20 14:00 · AI기반 엔드프로덕트 상용화 지원 (Type1)"
       }
     ],
     "ax-validation": [

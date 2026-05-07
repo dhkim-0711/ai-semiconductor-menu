@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-05-07T06:43:54.304Z",
+  "generatedAt": "2026-05-07T07:01:21.061Z",
   "source": "NIPA 사업공고",
-  "projectCount": 10,
+  "projectCount": 11,
   "projects": {
     "timely-support": [
       {
@@ -48,7 +48,23 @@
         "description": "NIPA 자동반영 · 종료 · 신청기간 : 2025-06-12 ~ 2025-06-30 · 2025년 AI반도체 조기 상용화 및 AX실증 지원 사업"
       }
     ],
-    "ax-device": [],
+    "ax-device": [
+      {
+        "label": "2026년 AX디바이스 개발·실증(정규트랙)사업 신규과제 운영기관 모집 공고",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=869&nttNo=16539",
+        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-03-09 15:00 ~ 2026-03-30 15:00 · AX디바이스 개발·실증(정규트랙)"
+      },
+      {
+        "label": "2026년 AX디바이스 개발 실증(미니트랙) 사업 공고",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=857&nttNo=16491",
+        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-02-24 09:00 ~ 2026-03-25 15:00 · AX디바이스 개발 실증(미니트랙)"
+      },
+      {
+        "label": "2026년 AX디바이스 개발·실증(정규트랙) 사업 수요기업 모집 공고",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=869&nttNo=16758",
+        "description": "NIPA 자동반영 · D-29 · 신청기간 : 2026-05-07 13:00 ~ 2026-06-05 15:00 · AX디바이스 개발·실증(정규트랙)"
+      }
+    ],
     "ondevice-expansion": [
       {
         "label": "2026년 온디바이스 AI 서비스 실증·확산 사업 신규과제 모집공고",
@@ -59,6 +75,18 @@
         "label": "2025년 온디바이스 AI 서비스 실증·확산 사업 공고(수정)",
         "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=805&nttNo=15990",
         "description": "NIPA 자동반영 · 종료 · 신청기간 : 2025-04-14 ~ 2025-04-30 · 온디바이스AI서비스 실증·확산"
+      }
+    ],
+    "ax-sprint": [
+      {
+        "label": "2026년 AI기반 엔드프로덕트 상용화 지원사업 Type2 신규과제 모집 공고",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=887&nttNo=16586",
+        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-04-05 00:00 ~ 2026-04-20 14:00 · AI기반 엔드프로덕트 상용화 지원 (Type2)"
+      },
+      {
+        "label": "2026년 AI기반 엔드프로덕트 상용화 지원사업 Type1 신규과제 모집 공고",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=886&nttNo=16585",
+        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-04-05 00:00 ~ 2026-04-20 14:00 · AI기반 엔드프로덕트 상용화 지원 (Type1)"
       }
     ],
     "ax-validation": [],

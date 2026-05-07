@@ -27,4 +27,4 @@ node tools/sync-nipa-notices.js
 node tools/build-web-data-from-csv.js
 ```
 
-The repository also includes a scheduled GitHub Actions workflow that refreshes notice links twice an hour and republishes the generated site data when new notices are detected.
+The repository also includes a scheduled GitHub Actions workflow that refreshes notice links twice a day and republishes the generated site data when new notices are detected.
