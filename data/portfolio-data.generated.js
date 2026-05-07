@@ -1,6 +1,6 @@
 window.AI_MENU_DATA = {
-  "generatedAt": "2026-05-07T07:01:29.933Z",
-  "noticeSyncGeneratedAt": "2026-05-07T07:01:21.061Z",
+  "generatedAt": "2026-05-07T07:16:15.188Z",
+  "noticeSyncGeneratedAt": "2026-05-07T07:16:05.732Z",
   "valueChains": [
     {
       "id": "strategy",
@@ -889,7 +889,7 @@ window.AI_MENU_DATA = {
       {
         "label": "2026년 AI반도체 시제품 제작지원 사업 공고",
         "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=858&nttNo=16492",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-02-24 09:00 ~ 2026-03-25 15:00 · AI반도체 사업화 적시지원"
+        "description": "AI반도체 사업화 적시지원 공고입니다."
       }
     ],
     "design-optimization": [
@@ -897,11 +897,6 @@ window.AI_MENU_DATA = {
         "label": "AI반도체 최적화 설계지원 사업소개",
         "href": "https://www.nipa.kr/home/bsnsAll/0/detail?bsnsDtlsIemNo=836",
         "description": "NIPA 공식 사업소개 화면에서 사업 개요와 지원 구조를 확인할 수 있습니다."
-      },
-      {
-        "label": "2025년도 과학기술정보통신부 『AI모델 맞춤형 설계 지원』사업 추가 모집 공고",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=836&nttNo=16266",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2025-08-28 00:00 ~ 2025-09-10 15:00 · AI반도체 최적화 설계지원"
       }
     ],
     "infra-upgrade": [
@@ -909,11 +904,6 @@ window.AI_MENU_DATA = {
         "label": "AI반도체 조기 상용화 및 AX실증 지원 사업소개",
         "href": "https://www.nipa.kr/home/bsnsAll/0/detail?bsnsDtlsIemNo=823",
         "description": "NIPA 공식 사업소개 화면에서 통합 사업 구조와 세부 지원 분야를 확인할 수 있습니다."
-      },
-      {
-        "label": "2025년 AI반도체 조기 상용화 및 AX실증 지원 사업 통합 공고",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=823&nttNo=16139",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2025-06-12 ~ 2025-06-30 · 2025년 AI반도체 조기 상용화 및 AX실증 지원 사업"
       }
     ],
     "application-poc": [
@@ -921,21 +911,6 @@ window.AI_MENU_DATA = {
         "label": "AI반도체 응용실증지원 사업소개",
         "href": "https://www.nipa.kr/home/bsnsAll/0/detail?bsnsDtlsIemNo=638",
         "description": "NIPA 공식 사업소개 화면에서 사업 목적과 지원 구조를 확인할 수 있습니다."
-      },
-      {
-        "label": "2024년도 과학기술정보통신부 AI반도체 응용실증지원 사업 신규과제 모집 공고",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=638&nttNo=15180",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2024-02-16 ~ 2024-03-29 · AI반도체 응용실증지원"
-      },
-      {
-        "label": "2022년도 과학기술정보통신부 AI반도체 실증지원사업 신규지원 대상과제 공고",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=638&nttNo=12139",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2022-03-02 ~ 2022-12-31 · AI반도체 응용실증지원"
-      },
-      {
-        "label": "2021년도 과학기술정보통신부 AI반도체 실증지원사업 신규지원 대상과제 공고",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=638&nttNo=11800",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2021-02-22 ~ 2021-12-31 · AI반도체 응용실증지원"
       }
     ],
     "early-commercialization": [
@@ -943,11 +918,6 @@ window.AI_MENU_DATA = {
         "label": "AI반도체 조기 상용화 및 AX실증 지원 사업소개",
         "href": "https://www.nipa.kr/home/bsnsAll/0/detail?bsnsDtlsIemNo=823",
         "description": "NIPA 공식 사업소개 화면에서 조기 상용화 지원의 전체 구조를 확인할 수 있습니다."
-      },
-      {
-        "label": "2025년 AI반도체 조기 상용화 및 AX실증 지원 사업 통합 공고",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=823&nttNo=16139",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2025-06-12 ~ 2025-06-30 · 2025년 AI반도체 조기 상용화 및 AX실증 지원 사업"
       }
     ],
     "ax-device": [
@@ -962,19 +932,19 @@ window.AI_MENU_DATA = {
         "description": "NIPA 공식 사업소개 화면에서 미니트랙 사업 개요와 추진 구조를 확인할 수 있습니다."
       },
       {
+        "label": "2026년 AX디바이스 개발·실증(정규트랙) 사업 수요기업 모집 공고",
+        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=869&nttNo=16758",
+        "description": "AX디바이스 개발·실증(정규트랙) 공고입니다."
+      },
+      {
         "label": "2026년 AX디바이스 개발·실증(정규트랙)사업 신규과제 운영기관 모집 공고",
         "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=869&nttNo=16539",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-03-09 15:00 ~ 2026-03-30 15:00 · AX디바이스 개발·실증(정규트랙)"
+        "description": "AX디바이스 개발·실증(정규트랙) 공고입니다."
       },
       {
         "label": "2026년 AX디바이스 개발 실증(미니트랙) 사업 공고",
         "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=857&nttNo=16491",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-02-24 09:00 ~ 2026-03-25 15:00 · AX디바이스 개발 실증(미니트랙)"
-      },
-      {
-        "label": "2026년 AX디바이스 개발·실증(정규트랙) 사업 수요기업 모집 공고",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=869&nttNo=16758",
-        "description": "NIPA 자동반영 · D-29 · 신청기간 : 2026-05-07 13:00 ~ 2026-06-05 15:00 · AX디바이스 개발·실증(정규트랙)"
+        "description": "AX디바이스 개발 실증(미니트랙) 공고입니다."
       }
     ],
     "ondevice-expansion": [
@@ -986,12 +956,7 @@ window.AI_MENU_DATA = {
       {
         "label": "2026년 온디바이스 AI 서비스 실증·확산 사업 신규과제 모집공고",
         "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=805&nttNo=16598",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-04-13 09:00 ~ 2026-04-30 15:00 · 온디바이스AI서비스 실증·확산"
-      },
-      {
-        "label": "2025년 온디바이스 AI 서비스 실증·확산 사업 공고(수정)",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=805&nttNo=15990",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2025-04-14 ~ 2025-04-30 · 온디바이스AI서비스 실증·확산"
+        "description": "온디바이스AI서비스 실증·확산 공고입니다."
       }
     ],
     "ax-sprint": [
@@ -1008,12 +973,12 @@ window.AI_MENU_DATA = {
       {
         "label": "2026년 AI기반 엔드프로덕트 상용화 지원사업 Type2 신규과제 모집 공고",
         "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=887&nttNo=16586",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-04-05 00:00 ~ 2026-04-20 14:00 · AI기반 엔드프로덕트 상용화 지원 (Type2)"
+        "description": "AI기반 엔드프로덕트 상용화 지원 (Type2) 공고입니다."
       },
       {
         "label": "2026년 AI기반 엔드프로덕트 상용화 지원사업 Type1 신규과제 모집 공고",
         "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=886&nttNo=16585",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2026-04-05 00:00 ~ 2026-04-20 14:00 · AI기반 엔드프로덕트 상용화 지원 (Type1)"
+        "description": "AI기반 엔드프로덕트 상용화 지원 (Type1) 공고입니다."
       }
     ],
     "ax-validation": [
@@ -1045,26 +1010,6 @@ window.AI_MENU_DATA = {
         "label": "AI반도체 기술인재 공급 플랫폼 사업소개",
         "href": "https://www.nipa.kr/home/bsnsAll/0/detail?bsnsDtlsIemNo=747",
         "description": "NIPA 공식 사업소개 화면에서 채용연계와 지원 구조를 확인할 수 있습니다."
-      },
-      {
-        "label": "2024년 AI반도체 기술인재 공급 플랫폼 사업 수요기업 모집 공고(2차수정)",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=747&nttNo=15528",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2024-06-10 ~ 2024-06-18 · AI반도체 기술인재 공급 플랫폼"
-      },
-      {
-        "label": "2024년 AI반도체 기술인재 공급 플랫폼 사업 수요기업 모집 공고(수정)",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=747&nttNo=15486",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2024-05-20 ~ 2024-05-29 · AI반도체 기술인재 공급 플랫폼"
-      },
-      {
-        "label": "2024년 AI반도체 기술인재 공급 플랫폼 사업 수요기업 모집 공고",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=747&nttNo=15363",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2024-04-05 ~ 2024-05-09 · AI반도체 기술인재 공급 플랫폼"
-      },
-      {
-        "label": "2024년 AI반도체 기술인재 공급 플랫폼 사업 운영기관 모집 공고",
-        "href": "https://www.nipa.kr/home/bsnsAll/0/nttDetail?tab=2&bbsNo=4&bsnsDtlsIemNo=747&nttNo=15362",
-        "description": "NIPA 자동반영 · 종료 · 신청기간 : 2024-04-05 ~ 2024-05-09 · AI반도체 기술인재 공급 플랫폼"
       }
     ]
   }

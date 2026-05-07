@@ -1,5 +1,4 @@
-const { valueChains = [], announcementLinksByProjectId = {}, noticeSyncGeneratedAt = null } =
-  window.AI_MENU_DATA || {};
+const { valueChains = [], announcementLinksByProjectId = {} } = window.AI_MENU_DATA || {};
 
 const state = {
   selectedValueChainId: null,
@@ -28,8 +27,7 @@ const elements = {
   detailMeta: document.querySelector("#detailMeta"),
   detailTabs: document.querySelector("#detailTabs"),
   detailPanel: document.querySelector("#detailPanel"),
-  announcementLinks: document.querySelector("#announcementLinks"),
-  announcementSyncStatus: document.querySelector("#announcementSyncStatus")
+  announcementLinks: document.querySelector("#announcementLinks")
 };
 
 function formatBudget(value) {
@@ -328,14 +326,6 @@ function renderProjectDetail() {
           현재 확인된 사업소개 또는 2026년 사업공고 링크가 없습니다.
         </div>
       `;
-
-  if (elements.announcementSyncStatus) {
-    elements.announcementSyncStatus.textContent = formatSyncTime(noticeSyncGeneratedAt);
-    elements.announcementSyncStatus.classList.toggle(
-      "is-hidden",
-      !elements.announcementSyncStatus.textContent
-    );
-  }
 
   [...elements.detailTabs.querySelectorAll("[data-tab-id]")].forEach((button) => {
     button.addEventListener("click", () => {

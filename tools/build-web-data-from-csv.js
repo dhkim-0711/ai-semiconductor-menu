@@ -88,6 +88,10 @@ function isNoticeLikeLink(link) {
   return /(?:nttNo=|\/home\/2-2\/)/.test(link.href);
 }
 
+function is2026NoticeLink(link) {
+  return /2026/.test(`${link.label} ${link.description}`);
+}
+
 function dedupeLinks(links) {
   const seen = new Set();
 
@@ -162,7 +166,9 @@ function buildData(rows, autoNoticeData) {
     chainMap.get(row.valueChainId).projects.push(project);
     const introLinks = splitLinks(row.introLinks);
     const introPages = introLinks.filter((link) => !isNoticeLikeLink(link));
-    const manualNoticeLinks = [...introLinks.filter(isNoticeLikeLink), ...splitLinks(row.noticeLinks)];
+    const manualNoticeLinks = [...introLinks.filter(isNoticeLikeLink), ...splitLinks(row.noticeLinks)].filter(
+      is2026NoticeLink
+    );
     announcementLinksByProjectId[row.projectId] = dedupeLinks([
       ...introPages,
       ...(autoNoticeLinksByProjectId[row.projectId] || []),

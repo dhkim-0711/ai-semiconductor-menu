@@ -118,39 +118,16 @@ function parsePostedDate(value) {
   return match ? match[0] : "";
 }
 
-function buildNoticeDescription({ sourceLabel, status, requestPeriod, postedAt }) {
-  const details = [];
-
-  if (status) {
-    details.push(status);
-  }
-
-  if (requestPeriod) {
-    details.push(requestPeriod);
-  } else if (postedAt) {
-    details.push(`등록일 ${postedAt}`);
-  }
-
-  if (sourceLabel) {
-    details.push(sourceLabel);
-  }
-
-  return `NIPA 자동반영${details.length ? ` · ${details.join(" · ")}` : ""}`;
+function buildNoticeDescription({ sourceLabel, projectName }) {
+  const name = sourceLabel || projectName;
+  return name ? `${name} 공고입니다.` : "해당 사업 공고입니다.";
 }
 
-function getStatusRank(status) {
-  if (status.includes("진행")) return 0;
-  if (status.includes("예정")) return 1;
-  if (status.includes("종료")) return 2;
-  return 3;
+function is2026Notice({ title, postedAt, requestPeriod }) {
+  return title.includes("2026") || postedAt.startsWith("2026-") || requestPeriod.includes("2026-");
 }
 
 function compareNotice(a, b) {
-  const statusRank = getStatusRank(a.meta.status) - getStatusRank(b.meta.status);
-  if (statusRank !== 0) {
-    return statusRank;
-  }
-
   const postedAtDiff = b.meta.postedAt.localeCompare(a.meta.postedAt);
   if (postedAtDiff !== 0) {
     return postedAtDiff;
@@ -159,7 +136,7 @@ function compareNotice(a, b) {
   return b.meta.nttNo.localeCompare(a.meta.nttNo, "en");
 }
 
-function parseNoticeRows(html, listUrl, projectNoticeId) {
+function parseNoticeRows(html, listUrl, noticeSource) {
   const rowMatches = [...html.matchAll(/<tr>([\s\S]*?)<\/tr>/g)];
   const notices = [];
 
@@ -175,7 +152,6 @@ function parseNoticeRows(html, listUrl, projectNoticeId) {
 
     const href = toAbsoluteUrl(linkMatch[1], listUrl);
     const title = normalizeText(linkMatch[3]);
-    const status = normalizeText(rowHtml.match(/<div class="point[^"]*">\s*<b>([\s\S]*?)<\/b>/)?.[1] ?? "");
     const sourceLabel = normalizeText(rowHtml.match(/<span class="box[^"]*">([\s\S]*?)<\/span>/)?.[1] ?? "");
     const bcoMatches = [...rowHtml.matchAll(/<span class="bco">([\s\S]*?)<\/span>/g)].map((match) =>
       normalizeText(match[1])
@@ -185,18 +161,17 @@ function parseNoticeRows(html, listUrl, projectNoticeId) {
       bcoMatches.find((value) => /^\d{4}-\d{2}-\d{2}$/.test(value)) ?? ""
     );
 
-    if (!title) {
+    if (!title || !is2026Notice({ title, postedAt, requestPeriod })) {
       return;
     }
 
     notices.push({
       label: title,
       href,
-      description: buildNoticeDescription({ sourceLabel, status, requestPeriod, postedAt }),
+      description: buildNoticeDescription({ sourceLabel, projectName: noticeSource.projectName }),
       meta: {
-        projectNoticeId,
+        projectNoticeId: noticeSource.noticeId,
         nttNo: linkMatch[2],
-        status,
         sourceLabel,
         requestPeriod,
         postedAt
@@ -252,7 +227,11 @@ function createProjectIndex(rows) {
   return rows.map((row) => ({
     projectId: row.projectId,
     projectName: row.projectName,
-    noticeIds: extractNoticeIds(row)
+    noticeSources: extractNoticeIds(row).map((noticeId) => ({
+      noticeId,
+      projectId: row.projectId,
+      projectName: row.projectName
+    }))
   }));
 }
 
@@ -298,18 +277,18 @@ async function collectProjectNotices(project) {
   const errors = [];
   let fetchedCount = 0;
 
-  for (const noticeId of project.noticeIds) {
-    const listUrl = NOTICE_LIST_URL.replace("{id}", noticeId);
+  for (const noticeSource of project.noticeSources) {
+    const listUrl = NOTICE_LIST_URL.replace("{id}", noticeSource.noticeId);
 
     try {
       const html = await fetchHtml(listUrl);
       fetchedCount += 1;
-      notices.push(...parseNoticeRows(html, listUrl, noticeId));
+      notices.push(...parseNoticeRows(html, listUrl, noticeSource));
     } catch (error) {
       errors.push({
         projectId: project.projectId,
         projectName: project.projectName,
-        noticeId,
+        noticeId: noticeSource.noticeId,
         listUrl,
         message: error.message
       });
@@ -326,7 +305,7 @@ async function collectProjectNotices(project) {
 async function main() {
   const rows = readRows();
   const projects = createProjectIndex(rows);
-  const withNoticeSource = projects.filter((project) => project.noticeIds.length > 0);
+  const withNoticeSource = projects.filter((project) => project.noticeSources.length > 0);
   const autoNoticeProjects = {};
   const errors = [];
   let fetchedPageCount = 0;
