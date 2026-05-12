@@ -462,7 +462,9 @@ body {
 }
 
 .updates-refresh-button {
-  min-width: 120px;
+  min-width: 88px;
+  padding: 8px 12px;
+  font-size: 0.86rem;
 }
 
 .updates-refresh-button:disabled {

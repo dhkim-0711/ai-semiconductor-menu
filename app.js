@@ -1,4 +1,5 @@
 const LATEST_DATA_SESSION_KEY = "aiMenuLatestData";
+const UI_STATE_SESSION_KEY = "aiMenuUiState";
 
 function getInitialData() {
   try {
@@ -14,14 +15,29 @@ function getInitialData() {
   return window.AI_MENU_DATA || {};
 }
 
+function getInitialUiState() {
+  try {
+    const cached = window.sessionStorage.getItem(UI_STATE_SESSION_KEY);
+    if (cached) {
+      window.sessionStorage.removeItem(UI_STATE_SESSION_KEY);
+      return JSON.parse(cached);
+    }
+  } catch {
+    // Ignore malformed cached UI state.
+  }
+
+  return {};
+}
+
 const { valueChains = [], announcementLinksByProjectId = {}, newsByType = {} } = getInitialData();
+const initialUiState = getInitialUiState();
 
 const state = {
-  selectedValueChainId: null,
-  selectedProjectId: null,
-  selectedTabId: "overview",
-  selectedNewsTabId: "press",
-  showStructureIntro: true
+  selectedValueChainId: initialUiState.selectedValueChainId ?? null,
+  selectedProjectId: initialUiState.selectedProjectId ?? null,
+  selectedTabId: initialUiState.selectedTabId ?? "overview",
+  selectedNewsTabId: initialUiState.selectedNewsTabId ?? "press",
+  showStructureIntro: initialUiState.showStructureIntro ?? true
 };
 
 const elements = {
@@ -54,6 +70,23 @@ const NEWS_TABS = [
   { id: "press", label: "외부 뉴스" },
   { id: "notice", label: "공지사항" }
 ];
+
+function persistUiState() {
+  try {
+    window.sessionStorage.setItem(
+      UI_STATE_SESSION_KEY,
+      JSON.stringify({
+        selectedValueChainId: state.selectedValueChainId,
+        selectedProjectId: state.selectedProjectId,
+        selectedTabId: state.selectedTabId,
+        selectedNewsTabId: state.selectedNewsTabId,
+        showStructureIntro: state.showStructureIntro
+      })
+    );
+  } catch {
+    // Ignore session storage failures.
+  }
+}
 
 function formatBudget(value) {
   return value === 0 ? "" : `${value.toLocaleString("ko-KR")}백만원`;
@@ -413,7 +446,7 @@ async function reloadLatestPublishedData() {
 
   const originalLabel = button.textContent.trim();
   button.disabled = true;
-  button.textContent = "확인 중...";
+  button.textContent = "불러오는 중";
 
   try {
     const response = await fetch(`./data/portfolio-data.generated.js?ts=${Date.now()}`, {
@@ -426,6 +459,7 @@ async function reloadLatestPublishedData() {
 
     const source = await response.text();
     const latestData = extractDataObject(source);
+    persistUiState();
     window.sessionStorage.setItem(LATEST_DATA_SESSION_KEY, JSON.stringify(latestData));
     window.location.reload();
   } catch {
@@ -449,6 +483,7 @@ function render() {
   if (elements.pageShell) {
     elements.pageShell.dataset.mode = state.showStructureIntro ? "structure" : "dashboard";
   }
+  persistUiState();
   if (state.showStructureIntro) {
     renderStructureDiagram();
     return;
