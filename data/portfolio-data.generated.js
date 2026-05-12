@@ -1,7 +1,7 @@
 window.AI_MENU_DATA = {
-  "generatedAt": "2026-05-12T01:09:05.250Z",
+  "generatedAt": "2026-05-12T01:19:31.027Z",
   "noticeSyncGeneratedAt": "2026-05-07T07:16:05.732Z",
-  "newsSyncGeneratedAt": "2026-05-12T01:08:57.369Z",
+  "newsSyncGeneratedAt": "2026-05-12T01:19:25.395Z",
   "valueChains": [
     {
       "id": "strategy",
@@ -1017,28 +1017,18 @@ window.AI_MENU_DATA = {
   "newsByType": {
     "press": [
       {
-        "title": "정보통신산업진흥원, 한-베트남 디지털 포럼 성료... 인공지능(AI) 반도체 기업 등 대거 참가",
-        "href": "https://www.nipa.kr/home/4-4-1/16368",
-        "publishedAt": "2025-10-31",
-        "source": "보도자료"
+        "title": "오케스트로, 112.5억 규모 ‘국산 AI 반도체 특화 클라우드 R&D 사업’ 수주",
+        "href": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5LTWpUajFDRFdJYWllZF9pX0otWXhsMW5ITnR4dDVTRGd5aXNYdmJWNTBsOHd4MTVhdWpTZE1ENUdERkthUi1WNndvRFBhLV9fSXBNSnZzSmhYcEhhTTVQaEtlMERkUkU?oc=5",
+        "publishedAt": "2026-05-08",
+        "source": "아이티데일리",
+        "priority": 11
       },
       {
-        "title": "[기획재정부 보도자료] 인공지능(AI)-반도체 업계 ‘쓴소리 간담회’ 개최",
-        "href": "https://www.nipa.kr/home/4-4-1/16305",
-        "publishedAt": "2025-09-11",
-        "source": "보도자료"
-      },
-      {
-        "title": "[한국정보통신진흥협회 공동 보도자료] 국산 AI반도체 개발자 커뮤니티 조성에 팔 걷어붙였다",
-        "href": "https://www.nipa.kr/home/4-4-1/15628",
-        "publishedAt": "2024-08-14",
-        "source": "보도자료"
-      },
-      {
-        "title": "[과학기술정보통신부 보도자료] 과기정통부, 국산 인공지능 반도체를 활용하여 개인정보보호가 강화된 지능형 가정 실증사업 착수",
-        "href": "https://www.nipa.kr/home/4-4-1/15559",
-        "publishedAt": "2024-07-02",
-        "source": "보도자료"
+        "title": "과기부, AX 디바이스 개발·실증 본격화…”일상 생활 확산 목표”",
+        "href": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB4RHhsaUVGYzJGUjRVbVNoNzJNX3l1cU9xZ2RBeDVjMEtORHBPZDZnWndIMGlJQkhKQWlJc2VwTkZ4b3dneC1qSGx1NUMySjRmZS05RUx0Z1F1XzloTzh6WkE4cGc4elp0V1E?oc=5",
+        "publishedAt": "2026-05-07",
+        "source": "AI타임스",
+        "priority": 9
       }
     ],
     "notice": [
@@ -1052,30 +1042,6 @@ window.AI_MENU_DATA = {
         "title": "2026년 온디바이스 AI 서비스 실증·확산 사업 신규과제 모집공고 관련 제출서류 양식 수정 안내",
         "href": "https://www.nipa.kr/home/2-1/16729",
         "publishedAt": "2026-04-20",
-        "source": "공지사항"
-      },
-      {
-        "title": "2026년도 AI 응용제품 신속 상용화 지원사업 신규과제 (AI 기반 엔드프로덕트 상용화 지원 Type 2(AI 민생 프로젝트)) 선정평가 결과 안내",
-        "href": "https://www.nipa.kr/home/2-1/16709",
-        "publishedAt": "2026-04-13",
-        "source": "공지사항"
-      },
-      {
-        "title": "2026년 AX 디바이스 개발·실증(정규트랙) 사업 신규과제 운영기관 선정평가 결과 안내",
-        "href": "https://www.nipa.kr/home/2-1/16685",
-        "publishedAt": "2026-04-07",
-        "source": "공지사항"
-      },
-      {
-        "title": "2026년 AI-반도체 해외실증 지원 사업 신규과제(서버형) 선정평가 결과 안내",
-        "href": "https://www.nipa.kr/home/2-1/16678",
-        "publishedAt": "2026-04-06",
-        "source": "공지사항"
-      },
-      {
-        "title": "2026년 AI-반도체 해외실증 지원 사업 신규과제(엣지형) 선정평가 결과 안내",
-        "href": "https://www.nipa.kr/home/2-1/16679",
-        "publishedAt": "2026-04-06",
         "source": "공지사항"
       }
     ]

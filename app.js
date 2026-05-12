@@ -34,7 +34,7 @@ const elements = {
 };
 
 const NEWS_TABS = [
-  { id: "press", label: "보도자료" },
+  { id: "press", label: "외부 뉴스" },
   { id: "notice", label: "공지사항" }
 ];
 
