@@ -437,7 +437,9 @@ body {
 
 .updates-card {
   display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
   gap: 14px;
+  height: 344px;
   background: linear-gradient(180deg, #ffffff, #fafafa);
   box-shadow: var(--shadow-soft);
 }
@@ -495,7 +497,11 @@ body {
 
 .news-feed-list {
   display: grid;
+  align-content: start;
   gap: 10px;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 4px;
 }
 
 .news-feed-link {
@@ -1029,6 +1035,10 @@ body {
   .summary-panel-card,
   .updates-card {
     padding: 20px;
+  }
+
+  .updates-card {
+    height: 344px;
   }
 
   .hero-meta,
