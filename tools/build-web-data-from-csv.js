@@ -7,6 +7,7 @@ const csvPath = path.join(dataDir, "projects-master.csv");
 const jsonPath = path.join(dataDir, "projects-master.json");
 const outputJsPath = path.join(dataDir, "portfolio-data.generated.js");
 const autoNoticePath = path.join(dataDir, "auto-notice-links.json");
+const aiUpdatesPath = path.join(dataDir, "ai-updates.json");
 
 function parseCsv(text) {
   const rows = [];
@@ -144,7 +145,39 @@ function readAutoNoticeData() {
   }
 }
 
-function buildData(rows, autoNoticeData) {
+function readAiUpdatesData() {
+  if (!fs.existsSync(aiUpdatesPath)) {
+    return {
+      generatedAt: null,
+      categories: {
+        press: [],
+        notice: []
+      }
+    };
+  }
+
+  try {
+    const parsed = JSON.parse(fs.readFileSync(aiUpdatesPath, "utf8"));
+    return {
+      generatedAt: parsed.generatedAt || null,
+      categories: parsed.categories || {
+        press: [],
+        notice: []
+      }
+    };
+  } catch (error) {
+    console.warn(`Failed to read AI updates data: ${error.message}`);
+    return {
+      generatedAt: null,
+      categories: {
+        press: [],
+        notice: []
+      }
+    };
+  }
+}
+
+function buildData(rows, autoNoticeData, aiUpdatesData) {
   const chainMap = new Map();
   const announcementLinksByProjectId = {};
   const autoNoticeLinksByProjectId = autoNoticeData.projects || {};
@@ -193,8 +226,13 @@ function buildData(rows, autoNoticeData) {
   return {
     generatedAt: new Date().toISOString(),
     noticeSyncGeneratedAt: autoNoticeData.generatedAt || null,
+    newsSyncGeneratedAt: aiUpdatesData.generatedAt || null,
     valueChains: [...chainMap.values()],
-    announcementLinksByProjectId
+    announcementLinksByProjectId,
+    newsByType: aiUpdatesData.categories || {
+      press: [],
+      notice: []
+    }
   };
 }
 
@@ -234,7 +272,8 @@ function main() {
   const csv = fs.readFileSync(csvPath, "utf8");
   const rows = parseCsv(csv);
   const autoNoticeData = readAutoNoticeData();
-  const data = buildData(rows, autoNoticeData);
+  const aiUpdatesData = readAiUpdatesData();
+  const data = buildData(rows, autoNoticeData, aiUpdatesData);
   writeOutputs(rows, data);
 }
 

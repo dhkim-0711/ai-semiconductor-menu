@@ -1,9 +1,10 @@
-const { valueChains = [], announcementLinksByProjectId = {} } = window.AI_MENU_DATA || {};
+const { valueChains = [], announcementLinksByProjectId = {}, newsByType = {} } = window.AI_MENU_DATA || {};
 
 const state = {
   selectedValueChainId: null,
   selectedProjectId: null,
   selectedTabId: "overview",
+  selectedNewsTabId: "press",
   showStructureIntro: true
 };
 
@@ -27,30 +28,18 @@ const elements = {
   detailMeta: document.querySelector("#detailMeta"),
   detailTabs: document.querySelector("#detailTabs"),
   detailPanel: document.querySelector("#detailPanel"),
-  announcementLinks: document.querySelector("#announcementLinks")
+  announcementLinks: document.querySelector("#announcementLinks"),
+  newsFeedTabs: document.querySelector("#newsFeedTabs"),
+  newsFeedList: document.querySelector("#newsFeedList")
 };
+
+const NEWS_TABS = [
+  { id: "press", label: "보도자료" },
+  { id: "notice", label: "공지사항" }
+];
 
 function formatBudget(value) {
   return value === 0 ? "" : `${value.toLocaleString("ko-KR")}백만원`;
-}
-
-function formatSyncTime(value) {
-  if (!value) {
-    return "";
-  }
-
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) {
-    return "";
-  }
-
-  return `자동 동기화 ${date.toLocaleString("ko-KR", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit"
-  })} 기준`;
 }
 
 function leaveStructureIntroToDashboard(payload) {
@@ -335,6 +324,61 @@ function renderProjectDetail() {
   });
 }
 
+function ensureNewsTabSelection() {
+  const hasCurrentTabItems = (newsByType[state.selectedNewsTabId] || []).length > 0;
+  if (hasCurrentTabItems) {
+    return;
+  }
+
+  const firstTabWithItems = NEWS_TABS.find((tab) => (newsByType[tab.id] || []).length > 0);
+  state.selectedNewsTabId = firstTabWithItems?.id || NEWS_TABS[0].id;
+}
+
+function renderNewsFeed() {
+  if (!elements.newsFeedTabs || !elements.newsFeedList) {
+    return;
+  }
+
+  ensureNewsTabSelection();
+
+  const activeTab = NEWS_TABS.find((tab) => tab.id === state.selectedNewsTabId) || NEWS_TABS[0];
+  const activeItems = newsByType[activeTab.id] || [];
+
+  elements.newsFeedTabs.innerHTML = NEWS_TABS.map((tab) => {
+    const itemCount = (newsByType[tab.id] || []).length;
+    return `
+      <button type="button" class="news-feed-tab ${tab.id === activeTab.id ? "is-active" : ""}" data-news-tab-id="${tab.id}">
+        <span>${tab.label}</span>
+        <span>${itemCount}건</span>
+      </button>
+    `;
+  }).join("");
+
+  elements.newsFeedList.innerHTML = activeItems.length
+    ? activeItems
+        .map(
+          (item) => `
+            <a class="news-feed-link" href="${item.href}" target="_blank" rel="noreferrer">
+              <strong>${item.title}</strong>
+              <span>${item.publishedAt ? `${item.publishedAt} · ${item.source}` : item.source}</span>
+            </a>
+          `
+        )
+        .join("")
+    : `
+        <div class="announcement-empty">
+          현재 확인된 AI반도체 관련 ${activeTab.label}이 없습니다.
+        </div>
+      `;
+
+  [...elements.newsFeedTabs.querySelectorAll("[data-news-tab-id]")].forEach((button) => {
+    button.addEventListener("click", () => {
+      state.selectedNewsTabId = button.dataset.newsTabId;
+      renderNewsFeed();
+    });
+  });
+}
+
 function ensureSelection() {
   const visibleProjects = getVisibleProjects();
   if (!state.selectedProjectId || !visibleProjects.some((project) => project.id === state.selectedProjectId)) {
@@ -356,6 +400,7 @@ function render() {
   renderProjects();
   renderSummary();
   renderProjectDetail();
+  renderNewsFeed();
 }
 
 elements.showAllButton.addEventListener("click", () => {

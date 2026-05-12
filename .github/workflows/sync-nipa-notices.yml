@@ -1,4 +1,4 @@
-name: Sync NIPA Notices
+name: Sync NIPA Data
 
 on:
   workflow_dispatch:
@@ -25,18 +25,21 @@ jobs:
       - name: Sync NIPA business notices
         run: node tools/sync-nipa-notices.js
 
+      - name: Sync NIPA updates
+        run: node tools/sync-nipa-updates.js
+
       - name: Rebuild site data
         run: node tools/build-web-data-from-csv.js
 
-      - name: Commit updated notice data
+      - name: Commit updated NIPA data
         run: |
-          if git diff --quiet -- data/auto-notice-links.json data/projects-master.json data/portfolio-data.generated.js; then
-            echo "No notice updates detected."
+          if git diff --quiet -- data/auto-notice-links.json data/ai-updates.json data/projects-master.json data/portfolio-data.generated.js; then
+            echo "No NIPA data updates detected."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/auto-notice-links.json data/projects-master.json data/portfolio-data.generated.js
-          git commit -m "Sync NIPA business notices"
+          git add data/auto-notice-links.json data/ai-updates.json data/projects-master.json data/portfolio-data.generated.js
+          git commit -m "Sync NIPA business data"
           git push
