@@ -395,11 +395,9 @@ function renderNewsFeed() {
   const activeItems = newsByType[activeTab.id] || [];
 
   elements.newsFeedTabs.innerHTML = NEWS_TABS.map((tab) => {
-    const itemCount = (newsByType[tab.id] || []).length;
     return `
       <button type="button" class="news-feed-tab ${tab.id === activeTab.id ? "is-active" : ""}" data-news-tab-id="${tab.id}">
         <span>${tab.label}</span>
-        <span>${itemCount}건</span>
       </button>
     `;
   }).join("");
