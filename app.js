@@ -1,4 +1,20 @@
-const { valueChains = [], announcementLinksByProjectId = {}, newsByType = {} } = window.AI_MENU_DATA || {};
+const LATEST_DATA_SESSION_KEY = "aiMenuLatestData";
+
+function getInitialData() {
+  try {
+    const cached = window.sessionStorage.getItem(LATEST_DATA_SESSION_KEY);
+    if (cached) {
+      window.sessionStorage.removeItem(LATEST_DATA_SESSION_KEY);
+      return JSON.parse(cached);
+    }
+  } catch {
+    // Fall back to the statically loaded data file.
+  }
+
+  return window.AI_MENU_DATA || {};
+}
+
+const { valueChains = [], announcementLinksByProjectId = {}, newsByType = {} } = getInitialData();
 
 const state = {
   selectedValueChainId: null,
@@ -30,7 +46,8 @@ const elements = {
   detailPanel: document.querySelector("#detailPanel"),
   announcementLinks: document.querySelector("#announcementLinks"),
   newsFeedTabs: document.querySelector("#newsFeedTabs"),
-  newsFeedList: document.querySelector("#newsFeedList")
+  newsFeedList: document.querySelector("#newsFeedList"),
+  refreshUpdatesButton: document.querySelector("#refreshUpdatesButton")
 };
 
 const NEWS_TABS = [
@@ -379,6 +396,47 @@ function renderNewsFeed() {
   });
 }
 
+function extractDataObject(source) {
+  const match = source.match(/^window\.AI_MENU_DATA = ([\s\S]*);\s*$/);
+  if (!match) {
+    throw new Error("Unable to parse generated data.");
+  }
+
+  return JSON.parse(match[1]);
+}
+
+async function reloadLatestPublishedData() {
+  const button = elements.refreshUpdatesButton;
+  if (!button) {
+    return;
+  }
+
+  const originalLabel = button.textContent.trim();
+  button.disabled = true;
+  button.textContent = "확인 중...";
+
+  try {
+    const response = await fetch(`./data/portfolio-data.generated.js?ts=${Date.now()}`, {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error(`Request failed with ${response.status}`);
+    }
+
+    const source = await response.text();
+    const latestData = extractDataObject(source);
+    window.sessionStorage.setItem(LATEST_DATA_SESSION_KEY, JSON.stringify(latestData));
+    window.location.reload();
+  } catch {
+    button.textContent = "다시 시도";
+    window.setTimeout(() => {
+      button.disabled = false;
+      button.textContent = originalLabel;
+    }, 1200);
+  }
+}
+
 function ensureSelection() {
   const visibleProjects = getVisibleProjects();
   if (!state.selectedProjectId || !visibleProjects.some((project) => project.id === state.selectedProjectId)) {
@@ -413,6 +471,12 @@ if (elements.openStructureIntroButton) {
   elements.openStructureIntroButton.addEventListener("click", () => {
     state.showStructureIntro = true;
     render();
+  });
+}
+
+if (elements.refreshUpdatesButton) {
+  elements.refreshUpdatesButton.addEventListener("click", () => {
+    void reloadLatestPublishedData();
   });
 }
 
