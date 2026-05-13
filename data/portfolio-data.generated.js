@@ -1,7 +1,7 @@
 window.AI_MENU_DATA = {
-  "generatedAt": "2026-05-12T01:19:31.027Z",
+  "generatedAt": "2026-05-13T04:09:11.524Z",
   "noticeSyncGeneratedAt": "2026-05-07T07:16:05.732Z",
-  "newsSyncGeneratedAt": "2026-05-12T01:19:25.395Z",
+  "newsSyncGeneratedAt": "2026-05-13T04:09:11.475Z",
   "valueChains": [
     {
       "id": "strategy",
@@ -1015,22 +1015,7 @@ window.AI_MENU_DATA = {
     ]
   },
   "newsByType": {
-    "press": [
-      {
-        "title": "오케스트로, 112.5억 규모 ‘국산 AI 반도체 특화 클라우드 R&D 사업’ 수주",
-        "href": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5LTWpUajFDRFdJYWllZF9pX0otWXhsMW5ITnR4dDVTRGd5aXNYdmJWNTBsOHd4MTVhdWpTZE1ENUdERkthUi1WNndvRFBhLV9fSXBNSnZzSmhYcEhhTTVQaEtlMERkUkU?oc=5",
-        "publishedAt": "2026-05-08",
-        "source": "아이티데일리",
-        "priority": 11
-      },
-      {
-        "title": "과기부, AX 디바이스 개발·실증 본격화…”일상 생활 확산 목표”",
-        "href": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB4RHhsaUVGYzJGUjRVbVNoNzJNX3l1cU9xZ2RBeDVjMEtORHBPZDZnWndIMGlJQkhKQWlJc2VwTkZ4b3dneC1qSGx1NUMySjRmZS05RUx0Z1F1XzloTzh6WkE4cGc4elp0V1E?oc=5",
-        "publishedAt": "2026-05-07",
-        "source": "AI타임스",
-        "priority": 9
-      }
-    ],
+    "press": [],
     "notice": [
       {
         "title": "2026년 AI 기반 엔드프로덕트 상용화 지원사업 Type2 신규과제 선정평가 결과 안내",
