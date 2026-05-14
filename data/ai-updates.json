@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-05-13T04:09:11.475Z",
+  "generatedAt": "2026-05-14T04:08:43.701Z",
   "source": "외부 뉴스 및 NIPA 공지사항",
   "categories": {
-    "press": [],
+    "press": [
+      {
+        "title": "폴라리스AI, 국산 AI 반도체 생태계 확장…온디바이스·로봇 적용 전략 제시",
+        "href": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9sTVA0WUM1eGFiaDVVNXpKQ2cyem5OamVrb19mZlVIMXNvZjlhMVk3eUotSzdKSDFqcnhkSy0ySlMzUkxmTHJfYlo5T0hTUHRiYVBkVjROTzZHTFdNOUFhZWxNR05uQkpLU2c?oc=5",
+        "publishedAt": "2026-05-14",
+        "source": "파이낸스스코프",
+        "priority": 11
+      },
+      {
+        "title": "오케스트로, 국산 AI 반도체 생태계 키운다…112억원 R&D 사업 수행",
+        "href": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xZnlUX0FIMTVwUnVreG05NWhscHRzMG9lUmRQUFlzcXBXX00zNGhqU3ByNlNYVUcyRjNTSzQxakJVSWJNSFpENnRNd1ZqaWJJZUlMV2p3?oc=5",
+        "publishedAt": "2026-05-08",
+        "source": "지디넷코리아",
+        "priority": 9
+      }
+    ],
     "notice": [
       {
         "title": "2026년 AI 기반 엔드프로덕트 상용화 지원사업 Type2 신규과제 선정평가 결과 안내",
@@ -18,11 +33,5 @@
       }
     ]
   },
-  "errors": [
-    {
-      "source": "외부 뉴스",
-      "url": "https://news.google.com/rss/search?q=(%22%EA%B5%AD%EC%82%B0%20AI%EB%B0%98%EB%8F%84%EC%B2%B4%22%20OR%20%22AI%20%EB%B0%98%EB%8F%84%EC%B2%B4%22%20OR%20%22AX%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%22%20OR%20%22%EC%98%A8%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20AI%22)%20-ETF%20-%EC%A3%BC%EA%B0%80%20-%EC%A6%9D%EC%8B%9C%20-%EC%88%9C%EB%A7%A4%EC%88%98%20-%EB%A7%88%EC%BC%93&hl=ko&gl=KR&ceid=KR:ko",
-      "message": "Command failed: curl --fail --silent --show-error --location --user-agent Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 https://news.google.com/rss/search?q=(%22%EA%B5%AD%EC%82%B0%20AI%EB%B0%98%EB%8F%84%EC%B2%B4%22%20OR%20%22AI%20%EB%B0%98%EB%8F%84%EC%B2%B4%22%20OR%20%22AX%20%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%22%20OR%20%22%EC%98%A8%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4%20AI%22)%20-ETF%20-%EC%A3%BC%EA%B0%80%20-%EC%A6%9D%EC%8B%9C%20-%EC%88%9C%EB%A7%A4%EC%88%98%20-%EB%A7%88%EC%BC%93&hl=ko&gl=KR&ceid=KR:ko\ncurl: (22) The requested URL returned error: 503\n"
-    }
-  ]
+  "errors": []
 }

@@ -1,7 +1,7 @@
 window.AI_MENU_DATA = {
-  "generatedAt": "2026-05-13T04:09:11.524Z",
+  "generatedAt": "2026-05-14T04:08:43.746Z",
   "noticeSyncGeneratedAt": "2026-05-07T07:16:05.732Z",
-  "newsSyncGeneratedAt": "2026-05-13T04:09:11.475Z",
+  "newsSyncGeneratedAt": "2026-05-14T04:08:43.701Z",
   "valueChains": [
     {
       "id": "strategy",
@@ -1015,7 +1015,22 @@ window.AI_MENU_DATA = {
     ]
   },
   "newsByType": {
-    "press": [],
+    "press": [
+      {
+        "title": "폴라리스AI, 국산 AI 반도체 생태계 확장…온디바이스·로봇 적용 전략 제시",
+        "href": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9sTVA0WUM1eGFiaDVVNXpKQ2cyem5OamVrb19mZlVIMXNvZjlhMVk3eUotSzdKSDFqcnhkSy0ySlMzUkxmTHJfYlo5T0hTUHRiYVBkVjROTzZHTFdNOUFhZWxNR05uQkpLU2c?oc=5",
+        "publishedAt": "2026-05-14",
+        "source": "파이낸스스코프",
+        "priority": 11
+      },
+      {
+        "title": "오케스트로, 국산 AI 반도체 생태계 키운다…112억원 R&D 사업 수행",
+        "href": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xZnlUX0FIMTVwUnVreG05NWhscHRzMG9lUmRQUFlzcXBXX00zNGhqU3ByNlNYVUcyRjNTSzQxakJVSWJNSFpENnRNd1ZqaWJJZUlMV2p3?oc=5",
+        "publishedAt": "2026-05-08",
+        "source": "지디넷코리아",
+        "priority": 9
+      }
+    ],
     "notice": [
       {
         "title": "2026년 AI 기반 엔드프로덕트 상용화 지원사업 Type2 신규과제 선정평가 결과 안내",
