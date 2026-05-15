@@ -1,7 +1,7 @@
 window.AI_MENU_DATA = {
-  "generatedAt": "2026-05-14T04:08:43.746Z",
+  "generatedAt": "2026-05-15T04:13:08.720Z",
   "noticeSyncGeneratedAt": "2026-05-07T07:16:05.732Z",
-  "newsSyncGeneratedAt": "2026-05-14T04:08:43.701Z",
+  "newsSyncGeneratedAt": "2026-05-15T04:13:08.669Z",
   "valueChains": [
     {
       "id": "strategy",
@@ -1024,10 +1024,10 @@ window.AI_MENU_DATA = {
         "priority": 11
       },
       {
-        "title": "오케스트로, 국산 AI 반도체 생태계 키운다…112억원 R&D 사업 수행",
-        "href": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4xZnlUX0FIMTVwUnVreG05NWhscHRzMG9lUmRQUFlzcXBXX00zNGhqU3ByNlNYVUcyRjNTSzQxakJVSWJNSFpENnRNd1ZqaWJJZUlMV2p3?oc=5",
-        "publishedAt": "2026-05-08",
-        "source": "지디넷코리아",
+        "title": "메가존클라우드, 사우디 아람코 대상 국산 AI반도체 해외 실증 추진",
+        "href": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5yQjFXamhwVTRKVGp4ZjFPY3pMMjZJcVFTNFZZUUkyeTZRVHZqOEJTZXdsX0tLd05Ha2FnRFo0bDl5VEFVdm5IcDRyMVJ6VW90bDVUWVk1Rlo3cmQzQXBXVEh0Mkt2N3F4ek1MaA?oc=5",
+        "publishedAt": "2026-05-15",
+        "source": "데이터넷",
         "priority": 9
       }
     ],
