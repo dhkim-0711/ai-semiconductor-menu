@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-05-15T04:13:08.669Z",
+  "generatedAt": "2026-05-16T03:55:13.967Z",
   "source": "외부 뉴스 및 NIPA 공지사항",
   "categories": {
     "press": [
       {
-        "title": "폴라리스AI, 국산 AI 반도체 생태계 확장…온디바이스·로봇 적용 전략 제시",
-        "href": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9sTVA0WUM1eGFiaDVVNXpKQ2cyem5OamVrb19mZlVIMXNvZjlhMVk3eUotSzdKSDFqcnhkSy0ySlMzUkxmTHJfYlo5T0hTUHRiYVBkVjROTzZHTFdNOUFhZWxNR05uQkpLU2c?oc=5",
+        "title": "폴라리스AI, 국산 AI 반도체 생태계 확대 나선다…온디바이스 AI·로봇 전략 공개",
+        "href": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1ObWNYazl2LUhXLVAwSHMyTm9rQ1FxWVNNZ3lOSGpzYUVQY0dWbDctTzNBR0VUdUlHanIyNHZBa21DUzVmOTF4UVFVS0MzcHE4bTZPeEFQZGp0a2JMeFdfbUln?oc=5",
         "publishedAt": "2026-05-14",
-        "source": "파이낸스스코프",
+        "source": "아시아경제",
         "priority": 11
       },
       {
-        "title": "메가존클라우드, 사우디 아람코 대상 국산 AI반도체 해외 실증 추진",
-        "href": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5yQjFXamhwVTRKVGp4ZjFPY3pMMjZJcVFTNFZZUUkyeTZRVHZqOEJTZXdsX0tLd05Ha2FnRFo0bDl5VEFVdm5IcDRyMVJ6VW90bDVUWVk1Rlo3cmQzQXBXVEh0Mkt2N3F4ek1MaA?oc=5",
+        "title": "메가존클라우드, 사우디 아람코 국산AI반도체 실증사업 컨소시엄 참여",
+        "href": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBXMEFsZGJ0LTIzZ2h1ODI4RTlmVnNiUWUwMDRlTGlpbXZwU21vNjlsRTdtTVh0TkYtM0FaRUJpelJYUUp6b1ZkbndZNU1BQ2N0LXNxbHMxRmlsY1BlZ2FMLWt4VHpCUQ?oc=5",
         "publishedAt": "2026-05-15",
-        "source": "데이터넷",
+        "source": "디일렉",
         "priority": 9
       }
     ],
